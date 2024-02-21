@@ -7,44 +7,44 @@
     <style>
         /* Basic Reset */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body, button { font-family: 'Arial', sans-serif; }
-        a { color: #007bff; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-
+        body, button { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
+        
         /* Layout & Container */
         .container { max-width: 1200px; margin: auto; padding: 20px; }
-
-        /* Header */
-        header { background: #007bff; color: white; padding: 40px 0; text-align: center; position: relative; }
-        header h1 { margin-bottom: 10px; }
-        header p { margin-bottom: 20px; }
-
-        /* Sticky Navbar */
-        nav { display: flex; justify-content: center; background: #0069d9; position: sticky; top: 0; z-index: 1000; }
+        
+        /* Header with Background Image */
+        header { background: url('header-bg.jpg') no-repeat center center/cover; color: white; padding: 40px 0; text-align: center; position: relative; }
+        header::after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); }
+        header h1 { z-index: 1; position: relative; }
+        header p { margin-bottom: 20px; z-index: 1; position: relative; }
+        
+        /* Navigation */
+        nav { display: flex; justify-content: center; background: #333; position: sticky; top: 0; z-index: 1000; }
         nav ul { list-style: none; padding: 0; display: flex; }
-        nav ul li { }
-        nav ul li a { color: white; padding: 15px 20px; display: block; }
-        nav ul li a:hover, nav ul li a.active { background: #0056b3; }
-
+        nav ul li a { color: white; padding: 15px 20px; display: block; background: #444; margin: 5px; border-radius: 5px; }
+        nav ul li a:hover, nav ul li a.active { background: #007bff; }
+        
         /* Sections */
         section { padding: 60px 0; text-align: center; }
+        section.bg-light { background-color: #f4f4f4; }
         h2 { color: #007bff; margin-bottom: 30px; }
-
-        /* Menu Items */
-        .menu-item, .schedule-table, .contact-info { background: #f9f9f9; padding: 30px; margin: 20px 0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .menu-item h3 { color: #007bff; margin-bottom: 15px; }
-
-        /* Schedule Table */
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { padding: 15px; border: 1px solid #ddd; }
-        th { background-color: #0069d9; color: white; }
-
-        /* Contact */
-        .contact-info p { margin-bottom: 15px; }
-
+        
+        /* Menu Items with Images */
+        .menu-item { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: left; display: flex; align-items: center; }
+        .menu-item img { width: 100px; border-radius: 50%; margin-right: 20px; }
+        
+        /* Testimonials */
+        .testimonial { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: left; }
+        .testimonial-quote { font-style: italic; }
+        .testimonial-author { font-weight: bold; margin-top: 10px; }
+        
+        /* Social Media Feed */
+        .social-feed { padding: 20px; }
+        .social-feed img { width: 100%; max-width: 300px; margin: 10px; border-radius: 10px; }
+        
         /* Footer */
-        footer { background: #007bff; color: white; text-align: center; padding: 20px 0; }
-
+        footer { background: #333; color: white; text-align: center; padding: 20px 0; margin-top: 20px; }
+        
         /* Smooth Scroll */
         html { scroll-behavior: smooth; }
     </style>
@@ -53,90 +53,57 @@
 
 <header>
     <h1>Delicious Eats On Wheels</h1>
-    <p>Your go-to food truck for gourmet sandwiches, fresh salads, and mouth-watering burgers!</p>
+    <p>Where Flavor Meets the Street</p>
 </header>
 
 <nav>
     <ul>
         <li><a href="#menu" class="nav-link">Menu</a></li>
-        <li><a href="#schedule" class="nav-link">Schedule</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
 </nav>
 
 <div class="container">
     <section id="menu">
-        <h2>Our Menu</h2>
+        <h2>Featured Menu Items</h2>
         <div class="menu-item">
-            <h3>Gourmet Sandwiches</h3>
-            <p>Try our wide variety of sandwiches, from classic BLTs to our special Avocado & Chicken Wrap.</p>
+            <img src="sandwich.jpg" alt="Gourmet Sandwich">
+            <div>
+                <h3>Gourmet Sandwiches</h3>
+                <p>Try our wide variety of sandwiches, from classic BLTs to our special Avocado & Chicken Wrap.</p>
+            </div>
         </div>
-        <div class="menu-item">
-            <h3>Fresh Salads</h3>
-            <p>Enjoy our fresh and hearty salads, perfect for a quick and healthy meal.</p>
-        </div>
-        <div class="menu-item">
-            <h3>Mouth-Watering Burgers</h3>
-            <p>Indulge in our juicy, homemade burgers, a favorite for all our customers.</p>
-        </div>
+        <!-- Add more menu items with images -->
     </section>
-
-    <section id="schedule">
-        <h2>Where To Find Us</h2>
-        <div class="schedule-table">
-            <table>
-                <tr>
-                    <th>Day</th>
-                    <th>Location</th>
-                    <th>Time</th>
-                </tr>
-                <tr>
-                    <td>Monday - Friday</td>
-                    <td>Downtown Business Park</td>
-                    <td>11:00 AM - 2:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Saturday</td>
-                    <td>City Farmers Market</td>
-                    <td>9:00 AM - 1:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Sunday</td>
-                    <td>Westside Community Park</td>
-                    <td>12:00 PM - 5:00 PM</td>
-                </tr>
-            </table>
-        </div>
+    
+    <section id="about" class="bg-light">
+        <h2>About Us</h2>
+        <p>We started our journey in 2020 with one simple goal: to bring our family recipes to the streets of our city. Our truck is more than just a place to grab lunch—it is a place to try out delicious and unique dishes that you will find nowhere else.</p>
     </section>
-
-    <section id="contact">
+    
+    <section id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial">
+            <p class="testimonial-quote">"The best street food experience! Their gourmet sandwiches are a must-try for anyone visiting the city."</p>
+            <p class="testimonial-author">- Jane Doe</p>
+        </div>
+        <!-- Add more testimonials -->
+    </section>
+    
+    <section id="contact" class="bg-light">
         <h2>Get In Touch</h2>
-        <div class="contact-info">
-            <p>Have questions or want to book us for your next event? Reach out!</p>
-            <p>Email: <a href="mailto:info@deliciouseatsonwheels.com">info@deliciouseatsonwheels.com</a></p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Follow us on <a href="#">Facebook</a>, <a href="#">Instagram</a>, and <a href="#">Twitter</a> for updates and special offers!</p>
-        </div>
+        <p>Have questions or want to book us for your next event? Reach out!</p>
+        <p>Email: <a href="mailto:info@deliciouseatsonwheels.com">info@deliciouseatsonwheels.com</a></p>
+        <p>Phone: (123) 456-7890</p>
     </section>
 </div>
 
 <footer>
-    <p>© 2024 Delicious Eats On Wheels. All rights reserved. <a href="#">Privacy Policy</a></p>
+    <p>Follow us on social media for the latest updates and where we’ll be next!</p>
+    <p>© 2024 Delicious Eats On Wheels. All rights reserved.</p>
 </footer>
-
-<script>
-// Add active class to the current button to highlight it
-var navLinks = document.querySelectorAll('.nav-link');
-for (var i = 0; i < navLinks.length; i++) {
-    navLinks[i].addEventListener('click', function() {
-        var current = document.getElementsByClassName('active');
-        if (current.length > 0) { 
-            current[0].className = current[0].className.replace(' active', '');
-        }
-        this.className += ' active';
-    });
-}
-</script>
 
 </body>
 </html>
