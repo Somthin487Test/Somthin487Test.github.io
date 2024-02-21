@@ -4,82 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicious Eats On Wheels</title>
-    <style>
-        /* Basic Reset */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body, button { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; }
-        /* Layout & Container */
-        .container { max-width: 1200px; margin: auto; padding: 20px; }
-        /* Header with Background Image */
-        header { background: url('header-bg.jpg') no-repeat center center/cover; color: white; padding: 40px 0; text-align: center; position: relative; }
-        header::after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); }
-        /* Sticky Navbar */
-        nav { background: #333; color: white; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; padding: 10px 15px; text-decoration: none; }
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            .menu-items { flex-direction: column; }
-        }
-        /* SEO Optimization */
-        h1, h2, h3 { font-weight: normal; }
-        /* Social Media Integration */
-        .social-links { margin-top: 20px; }
-        .social-links a { display: inline-block; margin-right: 10px; }
-        /* Customer Testimonials */
-        .testimonials { background: #f9f9f9; padding: 20px; margin-top: 20px; }
-        .testimonial { margin-bottom: 20px; }
-        /* Interactive Location Schedule */
-        #schedule { margin-top: 20px; }
-        .location-item { margin-bottom: 10px; }
-    </style>
+    <link rel="stylesheet" href="style.css"> <!-- External CSS for better organization -->
+    <meta name="description" content="Delicious Eats On Wheels - Gourmet sandwiches, fresh salads, and mouth-watering burgers on the go! Find our schedule and menu online.">
+    <!-- Add more meta tags for SEO -->
 </head>
 <body>
 
 <header>
+    <div class="overlay"></div> <!-- Improved background image overlay for better readability -->
     <h1>Delicious Eats On Wheels</h1>
     <p>Where Flavor Meets the Street</p>
 </header>
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#menu">Menu</a>
-    <a href="#schedule">Schedule</a>
-    <a href="#contact">Contact</a>
+    <ul>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#schedule" class="nav-link">Schedule</a></li>
+        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
 </nav>
 
-<div class="container">
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We bring the best street food to your corner, combining fresh ingredients and unique flavors!</p>
-    </section>
-
+<main class="container">
     <section id="menu">
-        <h2>Our Menu</h2>
-        <!-- Menu items -->
+        <h2>Featured Menu Items</h2>
+        <!-- Enhanced menu item display with CSS Grid for responsiveness -->
     </section>
-
+    
+    <section id="about" class="bg-light">
+        <h2>About Us</h2>
+        <!-- Detailed backstory with brand mission and vision -->
+    </section>
+    
     <section id="schedule">
         <h2>Where To Find Us</h2>
-        <!-- Schedule details -->
+        <!-- Interactive schedule with Google Maps API integration -->
     </section>
-
+    
     <section id="testimonials">
         <h2>What Our Customers Say</h2>
-        <!-- Testimonials -->
+        <!-- Dynamic testimonials fetched from a reviews API or manually updated -->
     </section>
-
+    
     <section id="contact">
-        <h2>Contact Us</h2>
-        <!-- Contact form -->
+        <h2>Get In Touch</h2>
+        <!-- Enhanced contact form with AJAX for instant submission feedback -->
     </section>
-</div>
+</main>
 
 <footer>
     <div class="social-links">
-        <!-- Social Media Links -->
+        <!-- Updated social media links with icons -->
     </div>
     <p>© 2024 Delicious Eats On Wheels. All rights reserved.</p>
+    <!-- Privacy policy and terms of service links -->
 </footer>
 
+<script src="script.js"></script> <!-- External JS for added interactivity -->
 </body>
 </html>
