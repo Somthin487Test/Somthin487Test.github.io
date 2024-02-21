@@ -9,36 +9,31 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Roboto', sans-serif; background: #fff; color: #333; }
         
-        /* Header with Interactive Slider */
-        .header { position: relative; overflow: hidden; }
-        .header-image { width: 100%; height: auto; }
-        .header-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; text-align: center; }
+        /* Header */
+        .header { background: url('header-bg.jpg') no-repeat center center/cover; padding: 100px 0; color: #fff; text-align: center; }
         
         /* Navigation */
         nav { background: #007bff; padding: 10px 0; color: #fff; text-align: center; }
-        nav a { color: #fff; text-decoration: none; margin: 0 15px; }
+        nav a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 18px; }
         
-        /* Dynamic Content: Menu with Carousel, Events, and Interactive Map */
-        .menu-carousel, .events { margin: 20px 0; }
-        .event { background: #f4f4f4; padding: 15px; margin-bottom: 10px; border-radius: 8px; }
-        .map { height: 300px; }
+        /* Sections */
+        section { padding: 40px 0; }
+        .menu-carousel, .events, .map { margin: 20px auto; max-width: 1200px; text-align: center; }
+        .event { background: #f4f4f4; padding: 20px; margin-bottom: 20px; border-radius: 8px; }
         
         /* Footer */
         footer { background: #333; color: #fff; text-align: center; padding: 20px 0; }
         
         @media screen and (max-width: 768px) {
-            .header-content { padding: 0 20px; }
+            nav a { font-size: 16px; }
         }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <img src="header-bg.jpg" alt="Food Truck Festive Night" class="header-image">
-    <div class="header-content">
-        <h1>Delicious Eats On Wheels</h1>
-        <p>Explore the flavors that travel to you!</p>
-    </div>
+    <h1>Delicious Eats On Wheels</h1>
+    <p>Explore the flavors that travel to you!</p>
 </div>
 
 <nav>
@@ -50,35 +45,27 @@
 
 <section id="menu" class="menu-carousel">
     <h2>Our Menu Highlights</h2>
-    <!-- Menu Carousel Here -->
-    <p>Carousel showcasing menu items with descriptions and images.</p>
+    <p>Here would be a carousel of menu items.</p>
 </section>
 
-<section id="find-us">
+<section id="find-us" class="map">
     <h2>Where To Find Us</h2>
-    <!-- Interactive Map Here -->
-    <div class="map">
-        <p>Interactive map showing today's location.</p>
-    </div>
+    <p>Interactive map placeholder.</p>
 </section>
 
 <section id="events">
     <h2>Upcoming Events</h2>
     <div class="event">
         <h3>Food Truck Festival</h3>
-        <p>Join us this weekend at the downtown food truck festival. Expect live music, great food, and fun activities!</p>
+        <p>Join us this weekend for fun and food.</p>
     </div>
-    <!-- More Events -->
+    <!-- Additional events can be added here -->
 </section>
 
 <footer>
-    <p>Follow us on social media for live updates and more!</p>
+    <p>Follow us on social media for updates and more!</p>
     <p>© 2024 Delicious Eats On Wheels. All rights reserved.</p>
 </footer>
-
-<script>
-    // Placeholder for any JavaScript code for interactivity, like a menu carousel or map initialization.
-</script>
 
 </body>
 </html>
