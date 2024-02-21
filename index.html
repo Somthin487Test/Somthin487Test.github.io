@@ -3,46 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasty Wheels - Gourmet Food Truck</title>
-    <link rel="stylesheet" href="style.css"> <!-- Ensure you create a CSS file for styling -->
+    <title>Delicious Eats On Wheels</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; }
+        .container { max-width: 1200px; margin: auto; padding: 20px; }
+        header { background: #333; color: #fff; padding: 20px 0; text-align: center; }
+        #menu, #schedule, #contact { margin-top: 20px; }
+        h2 { color: #333; }
+        .menu-item { background: #f2f2f2; padding: 10px; margin-bottom: 10px; }
+        .schedule-table, .contact-info { background: #f9f9f9; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        table, th, td { border: 1px solid #ddd; }
+        th, td { padding: 10px; text-align: left; }
+        footer { background: #333; color: #fff; text-align: center; padding: 10px 0; margin-top: 20px; }
+    </style>
 </head>
 <body>
+
 <header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <h1>Delicious Eats On Wheels</h1>
+    <p>Your go-to food truck for gourmet sandwiches, fresh salads, and mouth-watering burgers!</p>
 </header>
-<main>
-    <section id="hero">
-        <!-- Hero image or slider -->
-        <h1>Welcome to Tasty Wheels</h1>
-        <p>Bringing you gourmet dishes on the go!</p>
-    </section>
-    <section id="about">
-        <h2>About Our Food Truck</h2>
-        <p>Founded in [Year], Tasty Wheels offers a unique blend of world cuisines served right to your street corner. Come taste the adventure!</p>
-    </section>
-    <section id="featured-menu">
-        <h2>Featured Dishes</h2>
-        <div class="menu-items">
-            <!-- List of featured dishes -->
-            <article>
-                <h3>Dish Name</h3>
-                <p>Description of the dish.</p>
-            </article>
-            <!-- Repeat for other featured dishes -->
+
+<div class="container">
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <h3>Gourmet Sandwiches</h3>
+            <p>Try our wide variety of sandwiches, from classic BLTs to our special Avocado & Chicken Wrap.</p>
+        </div>
+        <div class="menu-item">
+            <h3>Fresh Salads</h3>
+            <p>Enjoy our fresh and hearty salads, perfect for a quick and healthy meal.</p>
+        </div>
+        <div class="menu-item">
+            <h3>Mouth-Watering Burgers</h3>
+            <p>Indulge in our juicy, homemade burgers, a favorite for all our customers.</p>
         </div>
     </section>
-</main>
+
+    <section id="schedule">
+        <h2>Where To Find Us</h2>
+        <div class="schedule-table">
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Location</th>
+                    <th>Time</th>
+                </tr>
+                <tr>
+                    <td>Monday - Friday</td>
+                    <td>Downtown Business Park</td>
+                    <td>11:00 AM - 2:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>City Farmers Market</td>
+                    <td>9:00 AM - 1:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>Westside Community Park</td>
+                    <td>12:00 PM - 5:00 PM</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-info">
+            <p>Have questions or want to book us for your next event? Reach out!</p>
+            <p>Email: <a href="mailto:info@deliciouseatsonwheels.com">info@deliciouseatsonwheels.com</a></p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Follow us on <a href="#">Facebook</a>, <a href="#">Instagram</a>, and <a href="#">Twitter</a> for updates and special offers!</p>
+        </div>
+    </section>
+</div>
+
 <footer>
-    <p>Follow us on social media!</p>
-    <!-- Social media links -->
+    <p>© 2024 Delicious Eats On Wheels. All rights reserved.</p>
 </footer>
+
 </body>
 </html>
