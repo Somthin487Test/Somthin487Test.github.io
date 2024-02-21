@@ -4,36 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicious Eats On Wheels</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
     <style>
+        /* Reset */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto', sans-serif; background: #fff; color: #333; }
-        
+        body, html { height: 100%; font-family: 'Open Sans', sans-serif; color: #333; }
+
         /* Header */
-        .header { background: url('header-bg.jpg') no-repeat center center/cover; padding: 100px 0; color: #fff; text-align: center; }
-        
+        .header { 
+            background: url('header-bg.jpg') no-repeat center center/cover; 
+            position: relative; 
+            height: 70vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            color: #fff; 
+        }
+        .header::after { /* Overlay */
+            content: ''; 
+            position: absolute; 
+            top: 0; left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: rgba(0, 0, 0, 0.5); 
+        }
+        .header-content { position: relative; z-index: 2; text-align: center; }
+
         /* Navigation */
-        nav { background: #007bff; padding: 10px 0; color: #fff; text-align: center; }
-        nav a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 18px; }
-        
+        nav { 
+            display: flex; 
+            justify-content: center; 
+            padding: 20px 0; 
+            background: #007bff; 
+        }
+        nav a { 
+            color: #fff; 
+            text-decoration: none; 
+            margin: 0 15px; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            transition: background-color 0.3s ease; 
+        }
+        nav a:hover { background-color: #0056b3; }
+
         /* Sections */
-        section { padding: 40px 0; }
-        .menu-carousel, .events, .map { margin: 20px auto; max-width: 1200px; text-align: center; }
-        .event { background: #f4f4f4; padding: 20px; margin-bottom: 20px; border-radius: 8px; }
+        section { 
+            padding: 60px 0; 
+            text-align: center; 
+        }
+        .section-bg { background-color: #f4f4f4; }
+        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
         
+        .menu-carousel h2, .events h2, .map h2 { margin-bottom: 30px; }
+
         /* Footer */
-        footer { background: #333; color: #fff; text-align: center; padding: 20px 0; }
+        footer { 
+            background: #333; 
+            color: #fff; 
+            text-align: center; 
+            padding: 40px 20px; 
+        }
         
-        @media screen and (max-width: 768px) {
-            nav a { font-size: 16px; }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header { height: 50vh; }
+            .header-content h1 { font-size: 24px; }
+            .header-content p { font-size: 18px; }
         }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <h1>Delicious Eats On Wheels</h1>
-    <p>Explore the flavors that travel to you!</p>
+    <div class="header-content">
+        <h1>Delicious Eats On Wheels</h1>
+        <p>Explore the flavors that travel to you!</p>
+    </div>
 </div>
 
 <nav>
@@ -44,26 +90,31 @@
 </nav>
 
 <section id="menu" class="menu-carousel">
-    <h2>Our Menu Highlights</h2>
-    <p>Here would be a carousel of menu items.</p>
+    <div class="container">
+        <h2>Our Menu Highlights</h2>
+        <p>Carousel showcasing menu items with descriptions and images.</p>
+    </div>
 </section>
 
-<section id="find-us" class="map">
-    <h2>Where To Find Us</h2>
-    <p>Interactive map placeholder.</p>
+<section id="find-us" class="map section-bg">
+    <div class="container">
+        <h2>Where To Find Us</h2>
+        <p>Interactive map showing today's location.</p>
+    </div>
 </section>
 
 <section id="events">
-    <h2>Upcoming Events</h2>
-    <div class="event">
-        <h3>Food Truck Festival</h3>
-        <p>Join us this weekend for fun and food.</p>
+    <div class="container">
+        <h2>Upcoming Events</h2>
+        <div class="event">
+            <h3>Food Truck Festival</h3>
+            <p>Join us this weekend at the downtown food truck festival. Expect live music, great food, and fun activities!</p>
+        </div>
     </div>
-    <!-- Additional events can be added here -->
 </section>
 
 <footer>
-    <p>Follow us on social media for updates and more!</p>
+    <p>Follow us on social media for live updates and more!</p>
     <p>© 2024 Delicious Eats On Wheels. All rights reserved.</p>
 </footer>
 
